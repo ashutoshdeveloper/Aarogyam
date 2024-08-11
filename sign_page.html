@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGin PAGE</title>
+    <link rel="stylesheet" href="styleA.css" type="text/css">
+</head>
+
+<body>
+    <!-- form -->
+    <div class="container" id="container">
+        <!-- sign up -->
+        <div class="form sign-up-container">
+            <form action="#">
+                <h1>Create an Account</h1>
+                <!-- icon -->
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href="#" class="social"><i class="fa fa-google" aria-hidden="true"></i></a>
+                    <a href="#" class="social"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </div>
+                <!-- icon -->
+                <span>or use your email for registration</span>
+                <!-- input field -->
+                <div class="input-field">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="Username">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" placeholder="Email">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <!-- sign up -->
+        <!-- sign in -->
+        <div class="form sign-in-container">
+            <form action="#">
+                <h1>Log-In</h1>
+
+                <!-- icon -->
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href="#" class="social"><i class="fa fa-google" aria-hidden="true"></i></a>
+                    <a href="#" class="social"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>   
+                </div>
+                <!-- icon -->
+                <span>or use your account</span>
+                <!-- input field -->
+                <div class="input-field">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="Username">
+                </div>
+                 
+                <div class="input-field">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <a href="#">Forget your password</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <!-- sign in -->
+        <!-- Overlay -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back</h1>
+                    <p>To keep connected with us please log in with your personal info</p>
+                    <img src="s1 (1).png" alt="" style="height: 25rem; width: 30rem; padding-top: 5%;">
+                    <button class="btn" id="signIn">Sign in</button>
+                </div>
+                
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello User</h1>
+                    <p>Enter your personal details and start your journey with us</p>
+                    <img src="s3.png" alt="" style="height: 25rem; width: 30rem;">
+                    <button class="btn" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+        <!-- overlay -->
+    </div>
+    <!-- form -->
+     <script>
+        const signUpButton=document.getElementById('signUp')
+        const signInButton=document.getElementById('signIn')
+        const container=document.getElementById('container')
+        signUpButton.addEventListener('click',()=>{
+            container.classList.add("right-panel-active");
+        })
+        signInButton.addEventListener('click',()=>{
+            container.classList.remove("right-panel-active");
+        })
+
+     </script>
+</body>
+
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up page </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contact2" id="Contact">
+        <div class="nav5"><a href="#">SIGN UP</a></div>
+        <form>
+            <div class="log-in-box">
+                <div class="log-in-form">
+                    <h1 class="title">Sign Up</h1>
+                    <div class="underline"></div>
+                    <div class="log-in-field namefield">
+                        <input type="text" placeholder="NAME">
+                    </div>
+                    <div class="log-in-field">
+                        <input type="email" placeholder="EMAIL">
+                    </div>
+                    <div class="log-in-field">
+                        <input type="password" placeholder="PASSWORD">
+                    </div>
+                    <p class="text">password Suggestions <a href="#">Click Here</a></p>
+                    <div class="btn-field">
+                        <button type="button" class="buton signupbtn">Sign Up</button>
+                    <button type="button" class="disable signinbtn">Sign In</button>
+                </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <-script part start -->
+
+    <!-- <script>
+        let signUpBtn = document.querySelector('.signupbtn');
+        let signInBtn = document.querySelector('.signinbtn');
+        let nameField = document.querySelector('.namefield');
+        let title = document.querySelector('.title');
+        let underline = document.querySelector('.underline');
+        let text = document.querySelector('.text');
+
+        signInBtn.addEventListener('click',()=>{
+          nameField.style.maxHeight  = '0';
+          title.innerHTML = 'Sign In';
+          text.innerHTML = 'Forgot Password';
+          signUpBtn.classList.add('disable');
+          signInBtn.classList.remove('disable');
+          underline.style.transform = 'translateX(35px)';
+
+        });
+
+        signUpBtn.addEventListener('click',()=>{
+          nameField.style.maxHeight  = '60px';
+          title.innerHTML = 'Sign Up';
+          text.innerHTML = 'Password suggestion';
+          signUpBtn.classList.remove('disable');
+          signInBtn.classList.add('disable');
+          underline.style.transform = 'translateX(0)';
+
+        });
+    </script>
+</body>
+</html> --> 
